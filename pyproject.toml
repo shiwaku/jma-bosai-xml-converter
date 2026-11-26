@@ -1,0 +1,40 @@
+[project]
+name = "jma-bosai-xml-converter"
+version = "0.1.0"
+description = "気象庁防災情報XMLを、GIS・WebGISでそのまま使える形式（GeoParquet、GeoJSON、PMTiles）に変換する"
+readme = "README.md"
+authors = [{ name = "shiwaku" }]
+license = "MIT"
+requires-python = ">=3.15.1"
+dependencies = [
+    "certifi>=2026.10.19",
+    "geopandas>=1.2.0",
+    "pyarrow>=26.0.1",
+    "shapely>=2.2.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+required-version = ">=0.13.5"
+exclude-newer = "7 days"
+# 技術標準の certifi 最低バージョン (2026.10.19) が 7 日以内の公開のため個別に許可
+exclude-newer-package = { certifi = "2026-10-24T00:00:00Z" }
+
+[tool.uv.build-backend]
+module-name = "jma_bosai_xml"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[dependency-groups]
+dev = [
+    "matplotlib>=3.11.2",
+    "pytest>=9.0.0",
+    "ruff>=0.14.0",
+]
