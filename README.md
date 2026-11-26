@@ -5,7 +5,7 @@
 防災情報XMLは場所を地域コードで書くことが多く、地図上の形（ジオメトリ）を持っていません。このツールは、電文のコードを気象庁の[予報区等GISデータ](https://www.data.jma.go.jp/developer/gis.html)と結び付け、時系列の入れ子を表に平らにして、QGIS や MapLibre で開ける形にします。
 
 > [!NOTE]
-> 開発を始めたところです。今あるのは調査用のスクリプトと[概要の整理](docs/jma-xml-overview.md)だけです。
+> 開発を始めたところです。[概要の整理](docs/jma-xml-overview.md)と、警報・注意報を市町村の面に変換する[検証](docs/verification-warnings.md)まで進んでいます。
 
 ## 方針
 
