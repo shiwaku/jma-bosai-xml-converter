@@ -21,7 +21,7 @@
 ## 関連リポジトリ
 
 - MCP サーバー（Claude から「今どこに警報が出ている？」と聞くと地図付きで返す）は別のリポジトリで作ります（予定）。
-- 変換した予報区等GISデータと履歴は、[shi-works-catalog](https://github.com/shiwaku/shi-works-catalog) の `jp-jma/` に載せることを検討しています。
+- 変換した予報区等GISデータと履歴は、[shi-works-catalog](https://github.com/shiwaku/shi-works-catalog) の `jp-jma/` に載せることを検討しています。時系列の扱いは[メモ](docs/portolan-timeseries.md)にまとめました。
 
 ## 開発
 
